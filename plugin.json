@@ -24,6 +24,10 @@
         "LITESPEED_REQUESTS"
     ],
 
+    "dashboards": [
+        { "name": "litespeed-overview", "layout": "d-w=3&d-h=3&d-pad=5&d-bg=none&d-g-LITESPEED_HTTPS_BYTES_IN=1-0-1-1-t&d-g-LITESPEED_HTTPS_BYTES_OUT=1-0-1-1-b&d-g-LITESPEED_HTTP_BYTES_IN=0-0-1-1-t&d-g-LITESPEED_HTTP_BYTES_OUT=0-0-1-1-b&d-g-LITESPEED_TOTAL_BYTES_IN=2-0-1-1-t&d-g-LITESPEED_TOTAL_BYTES_OUT=2-0-1-1-b&d-g-LITESPEED_CACHE_RATIO=2-2-1-1&d-g-LITESPEED_HTTP_CONNECTIONS=0-1-1-1&d-g-LITESPEED_HTTP_CONNECTION_LIMIT=0-2-1-1&d-g-LITESPEED_HTTPS_CONNECTIONS=1-1-1-1&d-g-LITESPEED_HTTPS_CONNECTION_LIMIT=1-2-1-1&d-g-LITESPEED_REQUESTS=2-1-1-1" }
+    ],
+
     "paramSchema" : [
          {
             "title" : "Report path",

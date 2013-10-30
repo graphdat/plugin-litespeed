@@ -1,4 +1,4 @@
-# Haproxy Graphdat Plugin
+# Litespeed Graphdat Plugin
 
 ## Tracks the following metrics for the [litespeed](http://www.litespeedtech.com/) webserver
 

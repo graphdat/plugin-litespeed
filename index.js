@@ -7,7 +7,6 @@ var _path = require('path');
 var IGNORE_LIST = ['VERSION', 'UPTIME', 'BLOCKED_IP', 'EOF'];
 
 var _pollInterval; // the interval to poll the metrics
-var _previous = {}; // remember the previous poll data so we can provide proper counts
 var _reports = []; // litespeed writes a file per core depnding on your licence
 var _source; // the source of the metrics
 var _vhosts = {}; // the virtual hosts to monitor
@@ -279,8 +278,6 @@ function poll(cb)
             return console.error(err);
 
         var cur = current;
-        var prev = _previous || {};
-        prev.vhosts = prev.vhosts || {};
 
         var httpConnLimit = (cur.MAXCONN) ? (cur.PLAINCONN / cur.MAXCONN) : 0;
         var httpsConnLimit = (cur.MAXSSL_CONN) ? (cur.SSLCONN / cur.MAXSSL_CONN) : 0;
@@ -307,11 +304,10 @@ function poll(cb)
             for(var v in cur.vhosts)
             {
                 var cur_host = cur.vhosts[v];
-                var prev_host = prev.vhosts[v] || {};
                 var hostname = _vhosts[v];
 
-                var cacheHits =  diff(cur_host.TOTAL_CACHE_HITS, prev_host.TOTAL_CACHE_HITS);
-                var requests = diff(cur_host.TOT_REQS, prev_host.TOT_REQS);
+                var cacheHits =  cur_host.CACHE_HITS_PER_SEC;
+                var requests = cur_host.REQ_PER_SEC;
                 var cacheRatio = (requests) ? cacheHits/requests : 0;
 
                 console.log('LITESPEED_CACHE_HITS %d %s', cacheHits, hostname);
@@ -320,7 +316,6 @@ function poll(cb)
                 console.log('LITESPEED_REQUESTS_IN_PROCESS %s %s', cur_host.REQ_PROCESSING, hostname);
             }
         }
-        _previous = current;
     });
 
     setTimeout(poll, _pollInterval);
