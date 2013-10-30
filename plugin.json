@@ -1,0 +1,45 @@
+{
+    "description" : "Displays important litespeed metrics",
+    "icon" : "icon.png",
+    "command" : "node index.js",
+    "postExtract" : "npm install",
+    "ignore" : "node_modules",
+
+    "metrics" : [
+        "LITESPEED_HTTP_CONNECTION_LIMIT",
+        "LITESPEED_HTTP_CONNECTIONS",
+        "LITESPEED_HTTP_IDLE_CONNECTIONS",
+        "LITESPEED_HTTPS_CONNECTION_LIMIT",
+        "LITESPEED_HTTPS_CONNECTIONS",
+        "LITESPEED_HTTPS_IDLE_CONNECTIONS",
+        "LITESPEED_HTTP_BYTES_IN",
+        "LITESPEED_HTTP_BYTES_OUT",
+        "LITESPEED_HTTPS_BYTES_IN",
+        "LITESPEED_HTTPS_BYTES_OUT",
+        "LITESPEED_TOTAL_BYTES_IN",
+        "LITESPEED_TOTAL_BYTES_OUT",
+        "LITESPEED_CACHE_HITS",
+        "LITESPEED_CACHE_RATIO",
+        "LITESPEED_REQUESTS_IN_PROCESS",
+        "LITESPEED_REQUESTS"
+    ],
+
+    "paramSchema" : [
+         {
+            "title" : "Report path",
+            "name" : "reportPath",
+            "description" : "The path to the lshttp .rtreport files",
+            "type" : "string",
+            "default" : "/tmp/lshttpd"
+        },
+        {
+            "title": "Virtual Hosts",
+            "name": "virutalHosts",
+            "description": "Include individual VHosts in your graphs",
+            "type" : "array",
+            "items" : {
+                "type" : "string"
+            }
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+	"reportPath" : "/tmp/lshttpd",
+	"virtualHosts" : [],
+	"pollInterval": 1000
+}

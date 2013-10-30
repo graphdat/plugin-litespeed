@@ -1,0 +1,26 @@
+{
+	"name": "graphdat-litespeed-plugin",
+	"version": "0.0.1",
+	"private": false,
+	"description": "Litespeed plugin for Graphat",
+	"main": "index.js",
+	"devDependencies": {},
+	"dependencies": {
+		"async": "0.2.9"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/graphdat/plugin-litespeed"
+	},
+	"keywords": [
+		"graphdat",
+		"plugin",
+		"litespeed"
+	],
+	"author": "Graphdat <support@graphdat.com>",
+	"license": "Apache v2",
+	"bugs": {
+		"url": "https://github.com/graphdat/plugin-litespeed/issues"
+	},
+	"engine": "node >= 0.8.1"
+}
