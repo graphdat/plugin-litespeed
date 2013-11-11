@@ -3,6 +3,7 @@ var _fs = require('fs');
 var _os = require('os');
 var _param = require('./param.json');
 var _path = require('path');
+var _tools = require('graphdat-plugin-tools');
 
 var IGNORE_LIST = ['VERSION', 'UPTIME', 'BLOCKED_IP', 'EOF'];
 
