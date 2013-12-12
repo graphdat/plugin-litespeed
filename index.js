@@ -307,9 +307,9 @@ function poll(cb)
                 var cur_host = cur.vhosts[v];
                 var hostname = _vhosts[v];
 
-                var cacheHits =  cur_host.CACHE_HITS_PER_SEC;
+                var cacheHits =  cur_host.CACHE_HITS_PER_SEC || 0;
                 var requests = cur_host.REQ_PER_SEC;
-                var cacheRatio = (requests) ? cacheHits/requests : 0;
+                var cacheRatio = (requests) ? cacheHits/requests : 0 || 0;
 
                 console.log('LITESPEED_CACHE_HITS %d %s', cacheHits, hostname);
                 console.log('LITESPEED_CACHE_RATIO %d %s', cacheRatio, hostname);
