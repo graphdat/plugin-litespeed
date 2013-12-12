@@ -281,6 +281,12 @@ function poll(cb)
         var httpConnLimit = (cur.MAXCONN) ? (cur.PLAINCONN / cur.MAXCONN) : 0;
         var httpsConnLimit = (cur.MAXSSL_CONN) ? (cur.SSLCONN / cur.MAXSSL_CONN) : 0;
 
+        // convert KB -> Bytes
+        cur.BPS_IN *= 1024;
+        cur.BPS_OUT *= 1024;
+        cur.SSL_BPS_IN *= 1024;
+        cur.SSL_BPS_OUT *= 1024;
+
         // OVERALL SERVER STATS
         console.log('LITESPEED_HTTP_CONNECTION_LIMIT %d %s', httpConnLimit, _source); // percentage
         console.log('LITESPEED_HTTP_CONNECTIONS %d %s', cur.PLAINCONN, _source);
@@ -307,12 +313,13 @@ function poll(cb)
 
                 var cacheHits =  cur_host.CACHE_HITS_PER_SEC || 0;
                 var requests = cur_host.REQ_PER_SEC;
+                var requestsInProcess = cur_host.REQ_PROCESSING || 0;
                 var cacheRatio = (requests) ? cacheHits/requests : 0 || 0;
 
                 console.log('LITESPEED_CACHE_HITS %d %s', cacheHits, hostname);
                 console.log('LITESPEED_CACHE_RATIO %d %s', cacheRatio, hostname);
                 console.log('LITESPEED_REQUESTS %d %s', requests, hostname);
-                console.log('LITESPEED_REQUESTS_IN_PROCESS %s %s', cur_host.REQ_PROCESSING, hostname);
+                console.log('LITESPEED_REQUESTS_IN_PROCESS %s %s', requestsInProcess, hostname);
             }
         }
     });
