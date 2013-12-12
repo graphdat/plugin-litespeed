@@ -8,6 +8,7 @@ var _tools = require('graphdat-plugin-tools');
 var IGNORE_LIST = ['VERSION', 'UPTIME', 'BLOCKED_IP', 'EOF'];
 
 var _pollInterval; // the interval to poll the metrics
+var _reportPath; // the directory with the litespeed files
 var _reports = []; // litespeed writes a file per core depnding on your licence
 var _source; // the source of the metrics
 var _vhosts = {}; // the virtual hosts to monitor
@@ -16,15 +17,12 @@ var _vhosts = {}; // the virtual hosts to monitor
 // VALIDATION
 // ==========
 
-// We need the reportPath to find the Litespeed report files
-if (!_param.reportPath)
+// set the reportPath if we do not have one
+_reportPath = _param.reportPath || '/tmp/lshttpd';
+
+if (!_fs.existsSync(_path.join(_reportPath, '.rtreport')))
 {
-    console.error('To get statistics from Litespeed we need a report path, the default is /tmp/lshttpd');
-    process.exit(-1);
-}
-if (!_fs.existsSync(_path.join(_param.reportPath, '.rtreport')))
-{
-    console.error('The report path "%s" was not found', _param.reportPath);
+    console.error('The report path "%s" was not found', _reportPath);
     process.exit(-1);
 }
 
@@ -40,13 +38,13 @@ _source = (_param.source || _os.hostname()).trim(); // get the metric source
 // =============
 
 // Parse the directory to get all of the files, we do not have permissions to actually list the files
-if (_fs.existsSync(_path.join(_param.reportPath, '.rtreport')))
-    _reports.push(_path.join(_param.reportPath, '.rtreport'));
+if (_fs.existsSync(_path.join(_reportPath, '.rtreport')))
+    _reports.push(_path.join(_reportPath, '.rtreport'));
 
 // now check if the individual CPU files exist
 for(var i=0; i<_os.cpus().length; i++)
-    if (_fs.existsSync(_path.join(_param.reportPath, '.rtreport.' + i)))
-        _reports.push(_path.join(_param.reportPath, '.rtreport.' + i));
+    if (_fs.existsSync(_path.join(_reportPath, '.rtreport.' + i)))
+        _reports.push(_path.join(_reportPath, '.rtreport.' + i));
 
 // if we have a set of vhosts, add them in
 if (_param.virtualHosts)
