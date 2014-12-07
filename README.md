@@ -1,34 +1,51 @@
-# Litespeed Graphdat Plugin
+Boundary Litespeed Plugin
+-------------------------
 
-## Tracks the following metrics for the [litespeed](http://www.litespeedtech.com/) webserver
+Collects metrics from Litespeed HTTP Server instance.
 
-* Global Stats
-  * LITESPEED_HTTP_BYTES_IN - HTTP Bytes In
-  * LITESPEED_HTTP_BYTES_OUT - HTTP Bytes Out
-  * LITESPEED_HTTPS_BYTES_IN - HTTPS Bytes In
-  * LITESPEED_HTTPS_BYTES_OUT - HTTPS Bytes Out
-  * LITESPEED_TOTAL_BYTES_IN - HTTP+HTTPS Bytes In
-  * LITESPEED_TOTAL_BYTES_OUT - HTTP+HTTPS Bytes Out
+### Platforms
+- Linux
+- OS X
+- SmartO
 
-  * LITESPEED_HTTP_CONNECTIONS - Current HTTP Connections
-  * LITESPEED_HTTP_IDLE_CONNECTIONS - Current Idle HTTP Connections
-  * LITESPEED_HTTP_CONNECTION_LIMIT -  HTTP Connections / Max HTTP Connections
+### Prerequisites
+- node version 0.8.0 or later
+- Java Runtime Environment (JRE) 1.6 or later
+- JMX Metrics are enabled (see Plugin Setup below)
 
-  * LITESPEED_HTTPS_CONNECTIONS - Current HTTPS connections
-  * LITESPEED_HTTPS_IDLE_CONNECTIONS - Current idle HTTPS connections
-  * LITESPEED_HTTPS_CONNECTION_LIMIT - HTTPs Connections / Max HTTPs Connections
+### Plugin Setup
+None
 
-* Per VHOST stats
-  * LITESPEED_CACHE_HITS - Number of Cache Hits
-  * LITESPEED_CACHE_RATIO - Cached Hits / Total Requests
-  * LITESPEED_REQUESTS - Requests per Second
-  * LITESPEED_REQUESTS_IN_PROCESS - Current number of requests in process
+### Plugin Configuration Fields
 
-## Pre Reqs
+Litespeed writes server statistics to multiple report files in the /tmp/lshttpd folder by default, check your configuration to ensure that the path is correct.  The number of reports are based on the number of CPUs on your server and the number of CPUs that you have licences for.
 
-None.  Litespeed write the servers statistics to multiple report file in the /tmp/lshttpd folder.  The number of reports are based on the number of CPUs on your server and the number of CPUs that you have licences for.
+|Field Name   |Description                             |
+|:------------|:---------------------------------------|
+|Report path  |The path to the lshttp .rtreport files  |
+|Virtual Hosts|Include individual VHosts in your graphs|
 
-### Installation & Configuration
 
-* The Report Path is the location of the Litespeed real time reports.  By default these are in `/tmp/lshttpd`, if you have changed the path, put the new path.
-* The Virutal Host list allow you to filter data and only return stats on the Virtual Hosts that you would like to see.  If the virtual host list is empty, the plugin will sum up all of the virtual hosts (using REQ_RATE []), if you add a filter to the list it will instead show stats for each Virtual Host individually.
+### Metrics Collected
+
+Tracks the following metrics for the [litespeed](http://www.litespeedtech.com/) webserver.
+
+|Metric Name                     |Description                                 |
+|:-------------------------------|:-------------------------------------------|
+|Litespeed HTTP Connection limit |The ratio of connections to the Max Limit   |
+|Litespeed Http Conns            |The number of current HTTP connections      |
+|Litespeed Idle Http Conns       |The number of current idle HTTP connections |
+|Litespeed HTTPS Connection limit|The ratio of connections to the Max Limit   |
+|Litespeed Https Conns           |The number of current HTTPS connections     |
+|Litespeed Idle Https Conns      |The number of current idle HTTPS connections|
+|Litespeed Http Bytes In         |The amount of inbound data over HTTP        |
+|Litespeed Http Bytes Out        |The amount of outbound data over HTTP       |
+|Litespeed Https Bytes In        |The amount of inbound data over HTTPS       |
+|Litespeed Https Bytes Out       |The amount of outbound data over HTTPS      |
+|Litespeed Total Bytes In        |The total amount of inbound data            |
+|Litespeed Total Bytes Out       |The total amount of outbound data           |
+|Litespeed Cache Hits            |The number of cache hits                    |
+|Litespeed Cache Hit Ratio       |The ratio of cache hits to overall requests |
+|Litespeed Requests in Process   |The number of requests in process           |
+|Litespeed Requests              |The number of requests                      |
+
