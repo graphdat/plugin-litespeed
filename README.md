@@ -13,6 +13,9 @@ Collects metrics from Litespeed HTTP Server instance.
 - Java Runtime Environment (JRE) 1.6 or later
 - JMX Metrics are enabled (see Plugin Setup below)
 
+### Plugin Setup
+None
+
 ### Plugin Configuration Fields
 
 Litespeed writes server statistics to multiple report files in the /tmp/lshttpd folder by default, check your configuration to ensure that the path is correct.  The number of reports are based on the number of CPUs on your server and the number of CPUs that you have licences for.
