@@ -10,8 +10,7 @@ Collects metrics from Litespeed HTTP Server instance.
 
 ### Prerequisites
 - node version 0.8.0 or later
-- Java Runtime Environment (JRE) 1.6 or later
-- JMX Metrics are enabled (see Plugin Setup below)
+- npm version 1.4.21 or later
 
 ### Plugin Setup
 None
