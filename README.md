@@ -3,19 +3,23 @@ Boundary Litespeed Plugin
 
 Collects metrics from Litespeed HTTP Server instance.
 
-### Platforms
-- Linux
-- OS X
-- SmartO
-
 ### Prerequisites
-- node version 0.8.0 or later
-- npm version 1.4.21 or later
+
+|     OS    | Linux | Windows | SmartOS | OS X |
+|:----------|:-----:|:-------:|:-------:|:----:|
+| Supported |   v   |    -    |    v    |  v   |
+
+
+|  Runtime | node.js | Python | Java |
+|:---------|:-------:|:------:|:----:|
+| Required |    +    |        |      |
+
+- [How to install node.js?](https://help.boundary.com/hc/articles/202360701)
 
 ### Plugin Setup
 None
 
-### Plugin Configuration Fields
+#### Plugin Configuration Fields
 
 Litespeed writes server statistics to multiple report files in the /tmp/lshttpd folder by default, check your configuration to ensure that the path is correct.  The number of reports are based on the number of CPUs on your server and the number of CPUs that you have licences for.
 
@@ -23,7 +27,6 @@ Litespeed writes server statistics to multiple report files in the /tmp/lshttpd 
 |:------------|:---------------------------------------|
 |Report path  |The path to the lshttp .rtreport files  |
 |Virtual Hosts|Include individual VHosts in your graphs|
-
 
 ### Metrics Collected
 
@@ -47,4 +50,3 @@ Tracks the following metrics for the [litespeed](http://www.litespeedtech.com/) 
 |Litespeed Cache Hit Ratio       |The ratio of cache hits to overall requests |
 |Litespeed Requests in Process   |The number of requests in process           |
 |Litespeed Requests              |The number of requests                      |
-
