@@ -300,8 +300,8 @@ function poll(cb)
         console.log('LITESPEED_HTTP_BYTES_OUT %d %s', cur.BPS_OUT, _source);
         console.log('LITESPEED_HTTPS_BYTES_IN %d %s', cur.SSL_BPS_IN, _source);
         console.log('LITESPEED_HTTPS_BYTES_OUT %d %s', cur.SSL_BPS_OUT, _source);
-        console.log('LITESPEED_TOTAL_BYTES_IN %d %s', sum(cur.BPS_IN + cur.SSL_BPS_IN), _source);
-        console.log('LITESPEED_TOTAL_BYTES_OUT %d %s', sum(cur.BPS_OUT + cur.SSL_BPS_OUT), _source);
+        console.log('LITESPEED_TOTAL_BYTES_IN %d %s', sum(cur.BPS_IN, cur.SSL_BPS_IN), _source);
+        console.log('LITESPEED_TOTAL_BYTES_OUT %d %s', sum(cur.BPS_OUT, cur.SSL_BPS_OUT), _source);
 
         // PER VHOST STATS
         if (cur.vhosts && Object.keys(cur.vhosts).length > 0)
