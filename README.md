@@ -52,15 +52,15 @@ Tracks the following metrics for the [LiteSpeed](http://www.litespeedtech.com/) 
 |Metric Name                      |Description                                   |
 |:--------------------------------|:---------------------------------------------|
 |Litespeed HTTP Connection limit  |The ratio of connections to the Max Limit.    |
-|Litespeed Http Conns             |The number of current HTTP connections.       |
-|Litespeed Idle Http Conns        |The number of current idle HTTP connections.  |
+|Litespeed HTTP Connections       |The number of current HTTP connections.       |
+|Litespeed Idle HTTP Connections  |The number of current idle HTTP connections.  |
 |Litespeed HTTPS Connection limit |The ratio of connections to the Max Limit.    |
-|Litespeed Https Conns            |The number of current HTTPS connections.      |
-|Litespeed Idle Https Conns       |The number of current idle HTTPS connections. |
-|Litespeed Http Bytes In          |The amount of inbound data over HTTP.         |
-|Litespeed Http Bytes Out         |The amount of outbound data over HTTP.        |
-|Litespeed Https Bytes In         |The amount of inbound data over HTTPS.        |
-|Litespeed Https Bytes Out        |The amount of outbound data over HTTPS.       |
+|Litespeed HTTPS Connections      |The number of current HTTPS connections.      |
+|Litespeed Idle HTTPS Connections |The number of current idle HTTPS connections. |
+|Litespeed HTTP Bytes In          |The amount of inbound data over HTTP.         |
+|Litespeed HTTP Bytes Out         |The amount of outbound data over HTTP.        |
+|Litespeed HTTPS Bytes In         |The amount of inbound data over HTTPS.        |
+|Litespeed HTTPS Bytes Out        |The amount of outbound data over HTTPS.       |
 |Litespeed Total Bytes In         |The total amount of inbound data.             |
 |Litespeed Total Bytes Out        |The total amount of outbound data.            |
 |Litespeed Cache Hits             |The number of cache hits.                     |
