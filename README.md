@@ -6,7 +6,7 @@ Collects metrics from LiteSpeed HTTP Web-Server.
 
 |     OS    | Linux | Windows | SmartOS | OS X |
 |:----------|:-----:|:-------:|:-------:|:----:|
-| Supported |   v   |    -    |    v    |  v   |
+| Supported | yes   | no      | yes     | yes  |
 
 - **OS**: Tested to work on **Debian-based Linux distributions** (although any Linux-based OS should work).
 - Requires access to "/tmp/lshttpd" (LiteSpeed real-time reporting folder).
@@ -24,13 +24,13 @@ To get the new meter:
 
 | Runtime  | node.js | Python | Java |
 |:---------|:-------:|:------:|:----:|
-| Required |         |        |      |
+| Required | no      | no     | no   |
 
 ### Meter less than V4.0
 
 | Runtime  | node.js | Python | Java |
 |:---------|:-------:|:------:|:----:|
-| Required |    v    |        |      |
+| Required | yes     |        |      |
 
 - [How to install node.js?](https://help.boundary.com/hc/articles/202360701)
 
