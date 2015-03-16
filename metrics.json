@@ -1,0 +1,132 @@
+{
+  "result": [
+    {
+      "name": "LITESPEED_HTTP_CONNECTION_LIMIT",
+      "displayName": "Litespeed HTTP Connection limit",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "number",
+      "displayNameShort": "The ratio of connections to the Max Limit.",
+      "defaultAggregate": "avg"
+    },
+    {
+      "name": "LITESPEED_HTTP_CONNECTIONS",
+      "displayName": "Litespeed HTTP Connections",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "integer",
+      "displayNameShort": "The number of current HTTP connections.",
+      "defaultAggregate": "avg"
+    },
+    {
+      "name": "LITESPEED_HTTP_IDLE_CONNECTIONS",
+      "displayName": "Litespeed Idle HTTP Connections",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "integer",
+      "displayNameShort": "The number of current idle HTTP connections.",
+      "defaultAggregate": "avg"
+    },
+    {
+      "name": "LITESPEED_HTTPS_CONNECTION_LIMIT",
+      "displayName": "Litespeed HTTPS Connection limit",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "number",
+      "displayNameShort": "The ratio of connections to the Max Limit.",
+      "defaultAggregate": "avg"
+    },
+    {
+      "name": "LITESPEED_HTTPS_CONNECTIONS",
+      "displayName": "Litespeed HTTPS Connections",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "integer",
+      "displayNameShort": "The number of current HTTPS connections.",
+      "defaultAggregate": "avg"
+    },
+    {
+      "name": "LITESPEED_HTTPS_IDLE_CONNECTIONS",
+      "displayName": "Litespeed Idle HTTPS Connections",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "integer",
+      "displayNameShort": "The number of current idle HTTPS connections.",
+      "defaultAggregate": "avg"
+    },
+    {
+      "name": "LITESPEED_HTTP_BYTES_IN",
+      "displayName": "Litespeed HTTP Bytes In",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "bytecount",
+      "displayNameShort": "The amount of inbound data over HTTP.",
+      "defaultAggregate": "avg"
+    },
+    {
+      "name": "LITESPEED_HTTP_BYTES_OUT",
+      "displayName": "Litespeed HTTP Bytes Out",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "bytecount",
+      "displayNameShort": "The amount of outbound data over HTTP.",
+      "defaultAggregate": "avg"
+    },
+    {
+      "name": "LITESPEED_HTTPS_BYTES_IN",
+      "displayName": "Litespeed HTTPS Bytes In",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "bytecount",
+      "displayNameShort": "The amount of inbound data over HTTPS.",
+      "defaultAggregate": "avg"
+    },
+    {
+      "name": "LITESPEED_HTTPS_BYTES_OUT",
+      "displayName": "Litespeed HTTPS Bytes Out",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "bytecount",
+      "displayNameShort": "The amount of outbound data over HTTPS.",
+      "defaultAggregate": "avg"
+    },
+    {
+      "name": "LITESPEED_TOTAL_BYTES_IN",
+      "displayName": "Litespeed Total Bytes In",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "bytecount",
+      "displayNameShort": "The total amount of inbound data.",
+      "defaultAggregate": "avg"
+    },
+    {
+      "name": "LITESPEED_TOTAL_BYTES_OUT",
+      "displayName": "Litespeed Total Bytes Out",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "bytecount",
+      "displayNameShort": "The total amount of outbound data.",
+      "defaultAggregate": "avg"
+    },
+    {
+      "name": "LITESPEED_CACHE_HITS",
+      "displayName": "Litespeed Cache Hits",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "integer",
+      "displayNameShort": "The number of cache hits.",
+      "defaultAggregate": "avg"
+    }
+    {
+      "name": "LITESPEED_CACHE_RATIO",
+      "displayName": "Litespeed Cache Hit Ratio",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "number",
+      "displayNameShort": "The ratio of cache hits to overall requests.",
+      "defaultAggregate": "avg"
+    }
+    {
+      "name": "LITESPEED_REQUESTS",
+      "displayName": "Litespeed Requests",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "integer",
+      "displayNameShort": "The number of requests.",
+      "defaultAggregate": "avg"
+    }
+    {
+      "name": "LITESPEED_REQUESTS_IN_PROCESS",
+      "displayName": "Litespeed Requests in Process",
+      "description": "Total quota of memory allocated by the Couchbase cluster for this node.",
+      "unit": "integer",
+      "displayNameShort": "The number of requests in process.",
+      "defaultAggregate": "avg"
+    }
+  ]
+}
