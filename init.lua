@@ -125,7 +125,7 @@ function parseReport(file, callback)
 
     -- Safety check.
     if failure or not data then
-      print("ERROR: " .. failure)
+      process.stderr:write("ERROR: " .. failure)
       return callback({})
     end
 
