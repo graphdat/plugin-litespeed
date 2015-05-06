@@ -1,0 +1,130 @@
+{
+  "LITESPEED_CACHE_HITS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "The number of cache hits",
+    "displayName": "Litespeed Cache Hits",
+    "displayNameShort": "litespd-cache-hits",
+    "unit": "number"
+  },
+  "LITESPEED_CACHE_RATIO": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "The ratio of cache hits to overall requests",
+    "displayName": "Litespeed Cache Hit Ratio",
+    "displayNameShort": "litespd-cache-ratio",
+    "unit": "percent"
+  },
+  "LITESPEED_HTTPS_BYTES_IN": {
+    "defaultAggregate": "SUM",
+    "defaultResolutionMS": 1000,
+    "description": "The amount of inbound data over HTTPS",
+    "displayName": "Litespeed Https Bytes In",
+    "displayNameShort": "litespd-https-in",
+    "unit": "bytecount"
+  },
+  "LITESPEED_HTTPS_BYTES_OUT": {
+    "defaultAggregate": "SUM",
+    "defaultResolutionMS": 1000,
+    "description": "The amount of outbound data over HTTPS",
+    "displayName": "Litespeed Https Bytes Out",
+    "displayNameShort": "litespd-https-out",
+    "unit": "bytecount"
+  },
+  "LITESPEED_HTTPS_CONNECTIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "The number of current HTTPS connections",
+    "displayName": "Litespeed Https Conns",
+    "displayNameShort": "litespd-https-conn",
+    "unit": "number"
+  },
+  "LITESPEED_HTTPS_CONNECTION_LIMIT": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "The ratio of connections to the Max Limit",
+    "displayName": "Litespeed HTTPS Connection limit",
+    "displayNameShort": "litespd-https-limit",
+    "unit": "percent"
+  },
+  "LITESPEED_HTTPS_IDLE_CONNECTIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "The number of current idle HTTPS connections",
+    "displayName": "Litespeed Idle Https Conns",
+    "displayNameShort": "litespd-https-idle",
+    "unit": "number"
+  },
+  "LITESPEED_HTTP_BYTES_IN": {
+    "defaultAggregate": "SUM",
+    "defaultResolutionMS": 1000,
+    "description": "The amount of inbound data over HTTP",
+    "displayName": "Litespeed Http Bytes In",
+    "displayNameShort": "litespd-http-in",
+    "unit": "bytecount"
+  },
+  "LITESPEED_HTTP_BYTES_OUT": {
+    "defaultAggregate": "SUM",
+    "defaultResolutionMS": 1000,
+    "description": "The amount of outbound data over HTTP",
+    "displayName": "Litespeed Http Bytes Out",
+    "displayNameShort": "litespd-http-out",
+    "unit": "bytecount"
+  },
+  "LITESPEED_HTTP_CONNECTIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "The number of current HTTP connections",
+    "displayName": "Litespeed Http Conns",
+    "displayNameShort": "litespd-http-conn",
+    "unit": "number"
+  },
+  "LITESPEED_HTTP_CONNECTION_LIMIT": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "The ratio of connections to the Max Limit",
+    "displayName": "Litespeed HTTP Connection limit",
+    "displayNameShort": "litespd-http-limit",
+    "unit": "percent"
+  },
+  "LITESPEED_HTTP_IDLE_CONNECTIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "The number of current idle HTTP connections",
+    "displayName": "Litespeed Idle Http Conns",
+    "displayNameShort": "litespd-http-idle",
+    "unit": "number"
+  },
+  "LITESPEED_REQUESTS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "The number of requests",
+    "displayName": "Litespeed Requests",
+    "displayNameShort": "litespd-reqs",
+    "unit": "number"
+  },
+  "LITESPEED_REQUESTS_IN_PROCESS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "The number of requests in process",
+    "displayName": "Litespeed Requests in Process",
+    "displayNameShort": "litespd-reqs-in-prog",
+    "unit": "number"
+  },
+  "LITESPEED_TOTAL_BYTES_IN": {
+    "defaultAggregate": "SUM",
+    "defaultResolutionMS": 1000,
+    "description": "The total amount of inbound data",
+    "displayName": "Litespeed Total Bytes In",
+    "displayNameShort": "litespd-in",
+    "unit": "bytecount"
+  },
+  "LITESPEED_TOTAL_BYTES_OUT": {
+    "defaultAggregate": "SUM",
+    "defaultResolutionMS": 1000,
+    "description": "The total amount of outbound data",
+    "displayName": "Litespeed Total Bytes Out",
+    "displayNameShort": "litespd-out",
+    "unit": "bytecount"
+  }
+}
